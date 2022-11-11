@@ -1,0 +1,31 @@
+inside process 
+inside action 
+inside reset password 
+lovelysingeras297@gmail.com
+inside process 
+inside action 
+inside set new password 
+update UserInfo set userpassword='123456789' where email='lovelysingeras297@gmail.com'inside process 
+inside action 
+inside login 
+Inside user login
+Select * from UserInfo where email='nick@gmail.com' and userpassword='9aa90b438bb0dc6b51f78eaade37fe56'
+1 rowsLogin Successfull
+inside process 
+inside action 
+inside login 
+Inside user login
+Select * from UserInfo where email='nick@gmail.com' and userpassword='9aa90b438bb0dc6b51f78eaade37fe56'
+1 rowsLogin Successfull
+inside process 
+inside action 
+inside register 
+inside process 
+inside action 
+inside register 
+inside process 
+inside action 
+inside login 
+Inside user login
+Select * from UserInfo where email='ani@gmail.com' and userpassword='dc06698f0e2e75751545455899adccc3'
+1 rowsLogin Successfull
