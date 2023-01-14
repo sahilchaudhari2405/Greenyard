@@ -1,0 +1,49 @@
+<%- include("partials/header") -%>
+    <%- include("partials/dashboardHeader") -%>
+
+            <div class="branding">
+                <div class="company-title">
+                    <h1>Delivering <span>Plants,</span> <br>
+                        Delivering <span>Happiness!</span>
+                    </h1>
+                    <a class="upload-button" href="/addPlant">Upload New</a>
+                </div>
+                <div class="plant-image">
+                    <div class="img">
+                        <img src="images/plant.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="explore-section">
+                <div class="image-container">
+                    <div class="container mt-5">
+                        <div class="row">
+                            <div class="card-deck">
+                                <% for(let i=0; i<postDetails.length;i++){ %>
+                                    <% let postRoute="posts/" + postDetails[i].post_id +"-"+postDetails[i].post_title %>
+                                        <a href=<%- postRoute %> target="_blank">
+                                            <div id="" class="card mb-4" style="min-width: 16rem; max-width: 16rem; max-height: 26rem; min-height: 26rem;">
+                                                <img class="card-img-top"
+                                                    style="min-width: 16rem; max-width: 16rem; min-height: 16rem;"
+                                                    src=<%=postDetails[i].post_image_reference %> alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">
+                                                        <%= postDetails[i].post_title %>
+                                                    </h5>
+                                                    <p class="card-text">Author: <%= postDetails[i].user_name %>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Jquery CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>

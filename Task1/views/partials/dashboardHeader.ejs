@@ -1,0 +1,52 @@
+<body>
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a href="" class="navbar-brand"><a href="/home" id="logo"><img src="../images/logo.png" width="100px" alt=""
+                        srcset=""></a></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navToggle"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navToggle">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="hover-underline-animation" href="/home">Home</a></li>
+                    <li class="nav-item"><a class="hover-underline-animation" href="#">Shop</a></li>
+                    <li class="nav-item"><a class="hover-underline-animation" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="hover-underline-animation" href="#">About us</a></li>
+                    <li class="nav-item">
+                        <a id="logout-user" href="">
+                            <i class="fa fa-user-circle" aria-hidden="true">
+                                <span data-toggle="tooltip" data-placement="bottom" title="Logout" href="/logoutUser"
+                                    id="displayUserName">
+                                    <%= userDetails.userName %>
+                                </span>
+                            </i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Jquery CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+        <!-- <script src='script.js'></script> -->
+        <script src="../../script/script.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#logout-user').click(function () {
+                    let userSelection = confirm('Are you sure to logout?')
+                    if (userSelection) {
+                        $.ajax({
+                            method: 'post',
+                            url: '/logoutUser',
+                            success: function (response) {
+                            }
+                        })
+                    } else {
+                        return false;
+                    }
+                })
+            })
+        </script>
